@@ -1,0 +1,91 @@
+.user_table {
+    overflow-y: auto;
+    max-height: 320px;
+}
+
+.user_table thead th{
+	position: sticky;
+	top:0;
+}
+
+.edit, .delete{
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.action_column{
+	
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*.notfound{
+  display: none;
+}*/
+
+.search_col{
+    margin-bottom: 0.1rem !important;
+    margin-top: 0px;
+}
+
+.search_pad {
+    padding-bottom: 0px;
+    padding-top: 17px;
+}
+
+.add_mem_submit, .week_inc_submit, .expenses_info_submit{
+    margin-left: 15px;
+}
+
+.edit_mem {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.delete_mem {
+    margin-bottom: 10px;
+}
+
+.success_alert_show, .error_alert_show{
+    display: none;
+}
+
+.table_filter {
+    padding-right: 0px;
+    padding-left: 60px;
+}
+
+
+.date_filter, .amount_filter, .status_filter, .name_filter{
+    width: 102px;
+    height: 33.264px;
+}
+
+.table_filter{
+    padding-left: 18px;
+}
+
+.age_filter_width {
+    width: 56px;
+    height: 32px;
+}
+
+
+.gender_filter_width {
+    width: 86px;
+    height: 32px;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #ded7d7;
+    border-radius: 4px;
+    cursor: text;
+}
+
+.form_rep_feed {
+    line-height: 1rem !important;
+    padding: 0.8rem 1rem !important;
+}

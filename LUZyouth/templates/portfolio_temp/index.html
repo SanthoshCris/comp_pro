@@ -1,0 +1,735 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LUZ Church Youth</title>
+	<!-- ==============================================
+	Favicons
+	=============================================== -->
+	<link rel="shortcut icon" href="{% static 'assets/portfolio_assets/images/favicon.ico' %}">
+	<link rel="apple-touch-icon" href="{% static 'assets/portfolio_assets/images/apple-touch-icon.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/portfolio_assets/images/apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/portfolio_assets/images/apple-touch-icon-114x114.png' %}">
+	
+	<!-- ==============================================
+	CSS VENDOR
+	=============================================== -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/owl.carousel.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/magnific-popup.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/animate.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/vendor/bootstrap-dropdownhover.min.css' %}">
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/> -->
+	
+	<!-- ==============================================
+	Custom Stylesheet
+	=============================================== -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/style.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/portfolio_assets/css/custom.css' %}" />
+	
+    <script src="{% static 'assets/portfolio_assets/js/vendor/modernizr.min.js' %}"></script>
+
+</head>
+
+<body>
+
+	<!-- LOAD PAGE -->
+	<div class="animationload">
+		<div class="loader"></div>
+	</div>
+	
+	<!-- BACK TO TOP SECTION -->
+	<a href="#0" class="cd-top cd-is-visible cd-fade-out">Top</a>
+
+	<!-- HEADER -->
+    <div class="header header-1">
+    	<!-- TOPBAR -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7 col-md-6">
+						<p><em>Bible words flash</em></p>
+					</div>
+					<div class="col-sm-5 col-md-6">
+						<div class="sosmed-icon pull-right">
+							<a href="#"><i class="fa fa-facebook"></i></a> 
+							<a href="#"><i class="fa fa-youtube"></i></a> 
+							<a href="#"><i class="fa fa-instagram"></i></a> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    	<!-- MIDDLE BAR -->
+		<div class="middlebar">
+			<div class="container">				
+				<div class="contact-info">
+					<p class="main-title">LUZ CHURCH YOUTH</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- NAVBAR SECTION -->
+		<div class="navbar-main">
+			<div class="container">
+			    <nav class="navbar navbar-expand-lg">
+			        <a class="navbar-brand" href="index.html">
+						<img src="{% static 'assets/portfolio_assets/images/logo.png' %}" alt="" />
+					</a>
+			        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			            <span class="navbar-toggler-icon"></span>
+			        </button>
+			        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			            <ul class="navbar-nav">
+			                <li class="nav-item dropdown">
+			                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          HOME
+						        </a>
+<!-- 			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			                    	<a class="dropdown-item" href="index.html">Home 1</a>
+	          						<a class="dropdown-item" href="index-2.html">Home 2</a>
+	          						<a class="dropdown-item" href="index-3.html">Home 3</a>
+	          						<a class="dropdown-item" href="index-4.html">Home 4 - Onepage</a>
+							    </div> -->
+			                </li>
+			                <li class="nav-item dropdown">
+			                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          ABOUT US
+						        </a>
+<!-- 			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			                    	<a class="dropdown-item" href="about.html">About Us</a>
+	          						<a class="dropdown-item" href="faq.html">FAQ</a>
+	          						<a class="dropdown-item" href="our-team.html">Our Team</a>
+							    </div> -->
+			                </li>
+			                <li class="nav-item dropdown">
+			                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          EVENTS
+						        </a>
+<!-- 			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			                    	<a class="dropdown-item" href="cause.html">Causes</a>
+	          						<a class="dropdown-item" href="cause-single.html">Single Causes</a>
+							    </div> -->
+			                </li>
+			                <li class="nav-item dropdown">
+			                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          PRAYERS
+						        </a>
+<!-- 			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			                    	<a class="dropdown-item" href="404.html">404 Page</a>
+	          						<a class="dropdown-item" href="gallery.html">Gallery</a>
+	          						<a class="dropdown-item" href="testimonials.html">Testimonials</a>
+	          						<a class="dropdown-item" href="news-grid.html">News Grid</a>
+	          						<a class="dropdown-item" href="news-sidebar.html">News Sidebar</a>
+	          						<a class="dropdown-item" href="news-detail.html">News Detail</a>
+							    </div> -->
+			                </li>
+			                <li class="nav-item dropdown">
+			                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          LATEST NEWS
+						        </a>
+<!-- 			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			                    	<a class="dropdown-item" href="events.html">Events</a>
+	          						<a class="dropdown-item" href="events-single.html">Events Detail</a>
+							    </div> -->
+			                </li>
+			                <li class="nav-item dropdown">
+			                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          GALLERY
+						        </a>
+<!-- 			                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			                    	<a class="dropdown-item" href="events.html">Events</a>
+	          						<a class="dropdown-item" href="events-single.html">Events Detail</a>
+							    </div> -->
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link" href="contact.html">CONTACT US</a>
+			                </li>
+			            </ul>
+			        </div>
+			    </nav> <!-- -->
+
+			</div>
+		</div>
+
+    </div>
+
+	<!-- BANNER -->
+
+	<div id="oc-fullslider" class="banner owl-carousel">
+        <div class="owl-slide">
+        	<div class="item">
+	            <img src="{% static 'assets/portfolio_assets/images/home01.jpg' %}" alt="Slider">
+	            <div class="slider-pos">
+		            <div class="container">
+		            	<div class="wrap-caption">
+			                <h1 class="caption-heading bg"><span>Quotes</span> On church</h1>
+			                <p class="bg">Quotes on church</p>
+			            </div>  
+		            </div>
+	            </div>
+        	</div>
+        </div>
+        <div class="owl-slide">
+        	<div class="item">
+	            <img src="{% static 'assets/portfolio_assets/images/home02.jpg' %}" alt="Slider">
+	            <div class="slider-pos">
+	            <div class="container">
+	            	<div class="wrap-caption center">
+		                <h1 class="caption-heading bg"><span>#Quotes</span> based on image</h1>
+		                <!-- <p class="bg">remipsum dolor sit amet consectetur adipisicing</p> -->
+		            </div>  
+	            </div>  
+	            </div>  
+            </div>  
+        </div>
+        <div class="owl-slide">
+        	<div class="item">
+	            <img src="{% static 'assets/portfolio_assets/images/home03.jpg' %}" alt="Slider">
+	            <div class="slider-pos">
+	            <div class="container">
+	            	<div class="wrap-caption right">
+		                <h1 class="caption-heading bg"><span>#Quotes</span> based on image</h1>
+<!-- 		                <p class="bg">remipsum dolor sit amet consectetur adipisicing</p> -->
+		            </div>  
+	            </div>  
+	            </div>  
+            </div>  
+        </div>
+    </div>
+
+	<div class="clearfix"></div>
+	 
+	<!-- News and latest photos -->
+	<div class="section" data-background="images/bg-events.jpg">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="col-md-12 pull-left">
+					<div class="col-md-5 pull-left">
+						<h2 class="section-heading light news_head">
+							NEWS
+						</h2>			
+						<div class="list-events">
+							<div class="box-event">
+								<div class="meta-date">
+									<div class="date">10</div>
+									<div class="month">AUG</div>
+								</div>
+								<div class="body-content">
+									<h4 style="margin-top: 0px;">Gathering books for children</h4>
+									<div class="meta">
+										<span class="date"><i class="fa fa-clock-o"></i>  12:00 am - 5:00 pm</span>
+									</div>
+									<p>Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</p>
+								</div>
+							</div>
+							<div class="box-event">
+								<div class="meta-date">
+									<div class="date">24</div>
+									<div class="month">AUG</div>
+								</div>
+								<div class="body-content">
+									<h4 style="margin-top: 0px;">Meet greet volunteer</h4>
+									<div class="meta">
+										<span class="date"><i class="fa fa-clock-o"></i>  12:00 am - 5:00 pm</span>
+									</div>
+									<p>Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</p>
+								</div>
+							</div>
+							<!-- <a href="" class="btn btn-primary">SEE ALL EVENTS</a> -->
+						</div>	
+					</div>
+					<div class="col-md-7 latest_photos pull-left">
+						<div class="col-lg-4 pull-left mb-4">
+					    	<img src="{% static 'assets/portfolio_assets/images/blog-1.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" alt="">
+
+					    	<img src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+
+					    	<img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+					  	</div>
+
+					  	<div class="col-lg-4 pull-left mb-4">
+					    	<img src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+
+					    	<img src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+					  	</div>
+
+					  	<div class="col-lg-4 pull-left mb-4">
+					    	<img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+
+					    	<img src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+
+					    	<img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="">
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Priest and youth column , events , fb page -->
+	<div class="section section2">
+		<div class="content-wrap">
+			<div class="container section_2">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<div class="event-pin father_msg_main_div">
+							<h3 class="color-white">#Priest Column</h3>
+							<h5><a href="#">Monthly Message</a></h5>
+							<div class = "row priest_col_priest_name">
+								<div class="col-12 col-sm-4">
+									<div class="media"><img class="father_message_pic" src="{% static 'assets/portfolio_assets/images/testimony-thumb-1.jpg' %}" alt=""></div>
+								</div>
+								<div class="col-12 col-sm-8">
+									<h3><p>Father Name</p></h3>
+								</div>
+							</div>
+							<p class='father_message'>Sad ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</p>
+							<a href="#" class="read-more">Read More...</a>
+							<div class="more-event"><a href="#"><i class="fa fa-long-arrow-left"></i></a></div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-4">
+						<div class="leave-comment-box">
+							<h4 class="title-heading comments_heading" style="margin-top: 6px;margin-bottom: 20px;">Join us </h4>
+							<form action="#" class="form-comment">
+								<div class="row">
+									<div class="col-xs-12 col-md-6">
+										<div class="form-group">
+											<input type="text" id="name" name="name" value="" class="inputtext form-control" placeholder="Enter Name">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-6">
+										<div class="form-group">
+											<input type="text" id="name" name="name" value="" class="inputtext form-control" placeholder="Enter Contact No">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-12">
+										<div class="form-group">
+											<input type="text" id="name" name="name" value="" class="inputtext form-control" placeholder="Enter Email">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-12">
+										<div class="form-group">
+											<button id="send" type="submit" class="btn btn-primary">Join </button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="leave-comment-box">
+							<h4 class="title-heading comments_heading" style="margin-top: 6px;margin-bottom: 20px;">Leave Comments</h4>
+							<form action="#" class="form-comment">
+								<div class="row">
+									<div class="col-xs-12 col-md-6">
+										<div class="form-group">
+											<input type="text" id="name" name="name" value="" class="inputtext form-control" placeholder="Enter Name">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-6">
+										<div class="form-group">
+											<input type="text" id="name" name="name" value="" class="inputtext form-control" placeholder="Enter Email">
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-12">
+										<div class="form-group">
+											<textarea id="message" name="message" class="inputtext form-control" rows="3" placeholder="Enter Your Message..."></textarea>
+										</div>
+									</div>
+									<div class="col-xs-12 col-md-12">
+										<div class="form-group">
+											<button id="send" type="submit" class="btn btn-primary comment_bttn">Post Comment</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-4">
+						<h2 class="section-heading light fb_page">
+							FB Page  
+						</h2>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLuzChurchYouth&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="306" height="425" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	 
+
+
+<!-- Upcomming and present events -->
+
+	<div class="section events_section">
+		<div class="content-wrap upcomming_events">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading center up_head">
+							<span>Upcomming </span> and <span> Present </span> Events
+						</h2>
+					</div>
+					<div class="clearfix"></div>
+					<!-- Item 1 -->
+					<div class="col-sm-4 col-md-4">
+						<div class="event-pin youth_msg_main_div">
+							<h3 class="color-white">#YOUTH Column</h3>
+							<h5><a href="#">Monthly Message</a></h5>
+							<div class = "row priest_col_priest_name">
+								<div class="col-12 col-sm-4">
+									<div class="media"><img class="father_message_pic" src="{% static 'assets/portfolio_assets/images/testimony-thumb-1.jpg' %}" alt=""></div>
+								</div>
+								<div class="col-12 col-sm-8">
+									<h3><p>Father Name</p></h3>
+								</div>
+							</div>
+							<p class='father_message'>Sad ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</p>
+							<a href="#" class="read-more">Read More...</a>
+							<div class="more-event"><a href="#"><i class="fa fa-long-arrow-left"></i></a></div>
+						</div>
+			        </div>
+			        <!-- Item 2 -->
+					<div class="col-sm-4 col-md-4 e1">
+			            <div class="box-fundraising">
+		              		<div class="media">
+		                		<img src="{% static 'assets/portfolio_assets/images/cause-img-1.jpg' %}" alt="">
+		              		</div>
+		              		<div class="body-content">
+		              			<p class="title"><a href="cause-single.html">Current Event</a></p>
+		              			<p class="title"><a href="cause-single.html">Event-1 Name</a></p>
+		              			<div class="text">Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</div>
+		              		</div>
+			            </div>
+			        </div>
+					<div class="col-sm-4 col-md-4 e1">
+			            <div class="box-fundraising">
+		              		<div class="media">
+		                		<img src="{% static 'assets/portfolio_assets/images/cause-img-2.jpg' %}" alt="">
+		              		</div>
+		              		<div class="body-content">
+		              			<p class="title"><a href="cause-single.html">Upcomming Event</a></p>
+		              			<p class="title"><a href="cause-single.html">Event-2-test Name</a></p>
+		              			<div class="text">Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</div>
+		              		</div>
+			            </div>
+			        </div>
+					<div class="col-sm-4 col-md-4 e1">
+			            <div class="box-fundraising">
+		              		<div class="media">
+		                		<img src="{% static 'assets/portfolio_assets/images/cause-img-3.jpg' %}" alt="">
+		              		</div>
+		              		<div class="body-content">
+		              			<p class="title"><a href="cause-single.html">Upcomming Event</a></p>
+		              			<p class="title"><a href="cause-single.html">Event-3 Name</a></p>
+		              			<div class="text">Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</div>
+		              		</div>
+			            </div>
+			        </div>
+
+			        <!-- Item 3 -->
+					<div class="col-sm-4 col-md-4">
+			            <div class="box-fundraising">
+		              		<div class="media">
+		                		<img src="{% static 'assets/portfolio_assets/images/cause-img-3.jpg' %}" alt="">
+		              		</div>
+		              		<div class="body-content">
+		              			<p class="title"><a href="cause-single.html">Upcomming Event</a></p>
+		              			<p class="title"><a href="cause-single.html">Event-3 Name</a></p>
+		              			<div class="text">Teritatis et quasi architecto. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo invent.</div>
+		              		</div>
+			            </div>
+			        </div>
+					<div class="col-sm-12 col-md-12">
+						<div class="spacer-50"></div>
+						<div class="text-center">
+							<a href="cause.html" class="btn btn-primary">SEE ALL EVENTS</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Upcomming and present events end  -->
+
+
+	<!-- OUR GALLERY -->
+
+	<div class="section" data-background="images/bg-gallery.png">
+		<div class="content-wrap our_gallery">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-12 col-md-12">
+						<h2 class="section-heading center">
+							Our <span>Gallery</span>
+						</h2>
+					</div>
+					<div class="col-12 col-md-8">
+					<div class="row popup-gallery gutter-5">
+						<div class="col-xs-12 col-md-4">
+							<div class="box-gallery">
+								<a href="{% static 'assets/portfolio_assets/images/gallery-1.jpg' %}" title="Gallery #1">
+									<img src="{% static 'assets/portfolio_assets/images/gallery-1.jpg' %}" alt="" class="img-fluid">
+									<div class="project-info">
+										<div class="project-icon">
+											<span class="fa fa-search"></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<div class="box-gallery">
+								<a href="{% static 'assets/portfolio_assets/images/gallery-2.jpg' %}" title="Gallery #2">
+									<img src="{% static 'assets/portfolio_assets/images/gallery-2.jpg' %}" alt="" class="img-fluid">
+									<div class="project-info">
+										<div class="project-icon">
+											<span class="fa fa-search"></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<div class="box-gallery">
+								<a href="{% static 'assets/portfolio_assets/images/gallery-3.jpg' %}" title="Gallery #3">
+									<img src="{% static 'assets/portfolio_assets/images/gallery-3.jpg' %}" alt="" class="img-fluid">
+									<div class="project-info">
+										<div class="project-icon">
+											<span class="fa fa-search"></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<div class="box-gallery">
+								<a href="{% static 'assets/portfolio_assets/images/gallery-4.jpg' %}" title="Gallery #4">
+									<img src="{% static 'assets/portfolio_assets/images/gallery-4.jpg' %}" alt="" class="img-fluid">
+									<div class="project-info">
+										<div class="project-icon">
+											<span class="fa fa-search"></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<div class="box-gallery">
+								<a href="{% static 'assets/portfolio_assets/images/gallery-5.jpg' %}" title="Gallery #5">
+									<img src="{% static 'assets/portfolio_assets/images/gallery-5.jpg' %}" alt="" class="img-fluid">
+									<div class="project-info">
+										<div class="project-icon">
+											<span class="fa fa-search"></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<div class="box-gallery">
+								<a href="{% static 'assets/portfolio_assets/images/gallery-6.jpg' %}" title="Gallery #6">
+									<img src="{% static 'assets/portfolio_assets/images/gallery-6.jpg' %}" alt="" class="img-fluid">
+									<div class="project-info">
+										<div class="project-icon">
+											<span class="fa fa-search"></span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-4">
+					<div class="col-12 col-md-12">
+						<div class="leave-comment-box">
+							<h4 class="title-heading comments_heading" style="margin-top: 6px;margin-bottom: 20px;">Leave Comments</h4>
+								<form action="#" class="form-comment">
+									<div class="row">
+										<div class="col-xs-12 col-md-12">
+											<div class="form-group">
+												<input type="text" id="name" name="name" value="" class="inputtext form-control" placeholder="Enter Name">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-12">
+											<div class="form-group">
+												<input type="text" id="name" name="name" value="" class="inputtext form-control comment_email" placeholder="Enter Email">
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-12">
+											<div class="form-group">
+												<textarea id="message" name="message" class="inputtext form-control" rows="3" placeholder="Enter Your Message..."></textarea>
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-12">
+											<div class="form-group">
+												<button id="send" type="submit" class="btn btn-primary comment_bttn">Post Comment</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- OUR GALLERY END -->
+
+
+	<!-- OUR MEMBERS -->
+	<div class="section">
+		<div class="content-wrap">
+			<div class="container">
+				<div class="row our_team">
+
+					<div class="col-sm-2 president_div">
+						<div class="rs-team-1">
+							<div class="media"><img src="{% static 'assets/portfolio_assets/images/testimony-thumb-1.jpg' %}" alt=""></div>
+							<div class="body">
+								<div class="title">RAJU</div>
+								<div class="position">PRESIDENT</div>
+								<ul class="social-icon">
+									<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+									<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-2 secretary_div">
+						<div class="rs-team-1">
+							<div class="media"><img src="{% static 'assets/portfolio_assets/images/testimony-thumb-2.jpg' %}" alt=""></div>
+							<div class="body">
+								<div class="title">SECRETARY</div>
+								<div class="position">RITHIK RAJA</div>
+								<ul class="social-icon">
+									<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+									<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-2 treasurer_div">
+						<div class="rs-team-1">
+							<div class="media"><img src="{% static 'assets/portfolio_assets/images/testimony-thumb-3.jpg' %}" alt=""></div>
+							<div class="body">
+								<div class="title">TREASURER</div>
+								<div class="position">RICHARD</div>
+								<ul class="social-icon">
+									<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+									<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-2 vicepresident_div">
+						<div class="rs-team-1">
+							<div class="media"><img src="{% static 'assets/portfolio_assets/images/testimony-thumb-4.jpg' %}" alt=""></div>
+							<div class="body">
+								<div class="title">VICE PRESIDENT</div>
+								<div class="position">NAME</div>
+								<ul class="social-icon">
+									<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+									<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-2 jointsecretary_div">
+						<div class="rs-team-1">
+							<div class="media"><img src="{% static 'assets/portfolio_assets/images/testimony-thumb-5.jpg' %}" alt=""></div>
+							<div class="body">
+								<div class="title">JOINT SECRETARY</div>
+								<div class="position">NAME</div>
+								<ul class="social-icon">
+									<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+									<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-2 father_div">
+						<div class="rs-team-1">
+							<div class="media"><img src="{% static 'assets/portfolio_assets/images/testimony-thumb-6.jpg' %}" alt=""></div>
+							<div class="body">
+								<div class="title">PARISH PRIEST</div>
+								<div class="position">NAME</div>
+								<ul class="social-icon">
+									<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+									<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- OUR MEMBERS END -->
+
+	<!-- CTA -->
+	<div class="section cta">
+		<div class="content-wrap-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<div class="cta-1">
+			              	<div class="body-text">
+			                	<h3>Join your hand with us for a better life and beautiful future.</h3>
+			              	</div>
+			              	<div class="body-action">
+			                	<a href="#" class="btn btn-secondary">DONATE NOW</a>
+			              	</div>
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- JS VENDOR -->
+	<script src="{% static 'assets/portfolio_assets/js/vendor/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/portfolio_assets/js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/portfolio_assets/js/vendor/owl.carousel.js' %}"></script>
+	<script src="{% static 'assets/portfolio_assets/js/vendor/jquery.magnific-popup.min.js' %}"></script>
+
+	<!-- SENDMAIL -->
+	<script src="{% static 'assets/portfolio_assets/js/vendor/validator.min.js' %}"></script>
+	<script src="{% static 'assets/portfolio_assets/js/vendor/form-scripts.js' %}"></script>
+
+	<script src="{% static 'assets/portfolio_assets/js/script.js' %}"></script>
+	<script src="{% static 'assets/portfolio_assets/js/w3scriptcode.js' %}"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+	<!-- <script src="https://www.w3schools.com/lib/w3.js"></script> -->
+	<script>
+
+	w3.slideshow(".e1")
+	</script>
+
+</body>
+
+</html>

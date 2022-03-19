@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>User details</title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+    <script src=
+"https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js">
+</script>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+</script>
+
+    <!-- BEGIN: Theme CSS-->
+    {% include "base/css.html" %}
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header-->
+    {% include "base/header.html" %}
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    {% include "base/sidemenu.html" %}
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+            <div class="content-body">
+
+            <!-- STAT -->
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h2 class="font-weight-bolder mb-0">  ₹  {{ total_income }}</h2>
+                                    <p class="card-text">Total Income</p>
+                                </div>
+                                <div class="avatar bg-light-success m-0 p-50">
+                                    <div class="avatar-content">
+                                        <i data-feather="dollar-sign" class="avatar-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h2 class="font-weight-bolder mb-0"> ₹  {{ total_expences }}</h2>
+                                    <p class="card-text">Total Expences</p>
+                                </div>
+                                <div class="avatar bg-light-danger p-50 m-0">
+                                    <div class="avatar-content">
+                                        <i data-feather='shopping-bag'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h2 class="font-weight-bolder mb-0"> ₹  {{ balance_fund }}</h2>
+                                    <p class="card-text">Balance Fund</p>
+                                </div>
+                                <div class="avatar bg-light-success mr-2 p-50">
+                                    <div class="avatar-content">
+                                        <i data-feather="dollar-sign" class="avatar-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+                    <!-- STAT end -->
+                <section id="basic-input">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body search_pad">
+                                    <div class="row">
+                                        {% csrf_token %}
+     <!--                                    <div class="col-xl-4 col-md-6 col-12 mb-1 search_col">
+                                            <div class="form-group row">
+                                                <label for="colFormLabel" class="col-sm-3 col-form-label">Search</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id='txt_name' onkeyup="myfun()" placeholder="Enter name" />
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <div class="col-md-4 mb-1 search_col">
+                                            <div class="form-group row">
+                                                <label for="basicSelect" class="col-sm-3 col-form-label table_filter">Filter</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control finance_filter" id="basicSelect">
+                                                        <option value="">Select filter</option>
+                                                        <option value="week">Week</option>
+                                                        <option value="month">Month</option>
+                                                        <option value="year">Year</option>
+                                                        <option value="all">Overall data</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 search_col">
+                                            <!-- <div class="btn-group"> -->
+                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather='download'></i>
+                                                    Export
+                                                </button>
+
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0);" onclick="printit()"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer font-small-4 mr-50"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>Print</span></a>
+
+                                                    <a class="dropdown-item" href="javascript:void(0);" onclick="export2csv()" id ="excel"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text font-small-4 mr-50"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Csv</span></a>
+                                                </div>
+                                                <button class="btn create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-toggle="modal" data-target="#modals-slide-in"><span>Add New Record</span></button>  
+                                            <!-- </div>     -->
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Table Hover Animation start -->
+                <div class="row" id="table-hover-animation">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- <input type='text' id='txt_name' placeholder='Enter search name'> -->
+
+                            <div class="table-responsive user_table">
+                                <table class="table table-hover-animation finance_details_table", id="finance_details_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name <input type="text" class="form-control name_filter" placeholder="" id='name_filter_val' onkeyup="column_filter_cus(class_name='finance_details_table',col_num=0, input_box_id='name_filter_val')"/></th>
+                                            <th>Date <input type="text" class="form-control date_filter" placeholder="DD-MM-YYYY" id='date_filter_val' onkeyup="column_filter_cus(class_name='finance_details_table',col_num=1, input_box_id='date_filter_val')"/></th>
+                                            <th>Amount <input type="text" class="form-control amount_filter" id='amount_val' onkeyup="column_filter_cus(class_name='finance_details_table',col_num=2, input_box_id='amount_val')"/></th>
+                                            <th>Status <input type="text" class="form-control status_filter" id='status_val' onkeyup="column_filter_cus(class_name='finance_details_table',col_num=3, input_box_id='status_val')"/></th>
+                                            <th>Feedback</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for member in finance_details %}
+                                            <tr>          
+                                                <td>{{member.name}}</td>
+                                                <td>{{member.date}}</td>
+                                                <td>{{member.amount}}</td>
+                                                <td>{{member.status}}</td>
+                                                <td>{{member.feedback}}</td>
+                                                <td>     
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <a href="/editmember/{{member.id}}"><div class="col-xs-6 badge badge-pill badge-light-warning edit_mem">Edit
+                                                            </div></a>
+                                                            <a><div class="col-xs-6 badge badge-pill badge-light-danger delete_mem">Delete
+                                                            </div></a>
+                                                        </div>
+                                                    </div>  
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Week filter table -->
+                            <div class="table-responsive user_table week_filter_table">
+                                <table class="table table-hover-animation week_filter_table_t", id="member_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name <input type="text" class="form-control name_filter" placeholder="" id='week_name_filter_val' onkeyup="column_filter_cus(class_name='week_filter_table',col_num=0, input_box_id='week_name_filter_val')"/></th>
+                                            <th>Week</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for week_data in week_result %}
+                                            <tr>
+                                                <td>{{week_data.name}}</td>
+                                                <td>{{week_data.week}}</td>
+                                                <td>{{week_data.total}}</td>
+                                            </tr>
+                                        {% endfor %}                                       
+                                    </tbody>
+                                </table>
+                            </div>  
+
+                            <!-- Month filter table      -->
+                            <div class="table-responsive user_table month_filter_table">
+                                <table class="table table-hover-animation month_filter_table", id="member_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Month</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for month_data in month_result %}
+                                            <tr>
+                                                <td>{{month_data.name}}</td>
+                                                <td>{{month_data.month}}</td>
+                                                <td>{{month_data.total}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>  
+
+                            <!-- Year filter table   -->
+                            <div class="table-responsive user_table year_filter_table">
+                                <table class="table table-hover-animation year_filter_table", id="member_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Year</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for year_data in year_result %}
+                                            <tr>
+                                                <td>{{year_data.name}}</td>
+                                                <td>{{year_data.year}}</td>
+                                                <td>{{year_data.total}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+                <!-- Table head options end -->
+
+                <!-- form repeater -->
+                <div class="content-body">
+                    <section class="form-control-repeater">
+                        <div class="row">
+                            <!-- Invoice repeater -->
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Multiple Data Entry</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <form method="POST" class="invoice-repeater needs-validation multipledata_ent_form" novalidate autocomplete="off">
+                                            {% csrf_token %}
+                                            <div data-repeater-list="invoice">
+                                                <div data-repeater-item>
+                                                    <div class="row d-flex align-items-end">
+                                                        <div class="col-md-2 col-12">
+                                                            <div class="form-group">
+                                                                <label for="">Member Name</label>
+                                                                <select class="form-control selectit" multiple="multiple" name="multiple_mem">
+                                                                    <option value="">Select name</option>>
+                                                                    {% for mem in member_names %}
+                                                                        <option value="{{mem}}">{{mem}}</option>
+                                                                    {% endfor %}    
+                                                                    <option value="Father">Father</option>
+                                                                    <option value="Others">Others</option>  
+                                                                </select>
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                                <div class="invalid-feedback">Please Enter Date</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-12">
+                                                            <div class="form-group">
+                                                                <label for="fp-default">Date</label>
+                                                                <input type="text" id="fp-default" name="date" class="form-control flatpickr-disabled-range date_val" placeholder="DD-MM-YYYY" required/>
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                                <div class="invalid-feedback">Please Enter Date</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-12">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="basic-default-email1">Amount</label>
+                                                                <input list="amount_dropdown" type="number" name="amount" id="basic-default-email1" class="form-control" placeholder="Amount" aria-label="Mobile No" required />
+                                                                <datalist id="amount_dropdown">
+                                                                <option value="20">
+                                                                <option value="50">
+                                                                </datalist>
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                                <div class="invalid-feedback">Please enter amount</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-12">
+                                                            <div class="form-group">
+                                                                <label for="select-role">Status</label>
+                                                                <select class="form-control week_inc_f_status" id="select-role" name="status" required>
+                                                                    <option value="no">No</option>
+                                                                    <option value="yes">Yes</option>
+                                                                </select>
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                                <div class="invalid-feedback">Please select Status</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-12">
+                                                            <div class="form-group">
+                                                                <label class="d-block" for="validationBioBootstrap">Feedback</label>
+                                                                <textarea class="form-control week_inc_feedback form_rep_feed" id="validationBioBootstrap" name="feedback" rows="1" required></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-12 mb-50">
+                                                            <div class="form-group">
+                                                                <button class="btn btn-outline-danger text-nowrap px-1" data-repeater-delete type="button">
+                                                                    <i data-feather="x" class="mr-25"></i>
+                                                                    <span>Delete</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <!-- <div calss="col-12"> -->
+                                                    <div class="col-md-2 pull-left">
+                                                        <button class="btn btn-icon btn-primary add_new" type="button" data-repeater-create>
+                                                            <i data-feather="plus" class="mr-25"></i>
+                                                            <span>Add New</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-md-2 pull-left">
+                                                        <button type="submit" class="btn btn-primary multipledata_ent_btn">Submit</button>
+                                                    </div>
+                                                    <div class="col-md-2 pull-left">
+                                                        <button type="reset" class="btn btn-primary">Reset</button>
+                                                    </div>
+                                                <!-- </div> -->
+                                            </div>                                        
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Invoice repeater -->
+                        </div>
+                    </section>
+                </div>
+                <!-- form repeater end -->
+
+                <div class="modal modal-slide-in fade" id="modals-slide-in">
+                    <div class="modal-dialog sidebar-sm">
+                        <form class="add-new-record modal-content pt-0 needs-validation week_inc_form" autocomplete="off" novalidate method="POST" action="">
+                            {% csrf_token %}
+                            <section class="bs-validation">
+                                <div class="row">
+                                    <!-- Bootstrap Validation -->
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Weekly Income</h4>
+                                            </div>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+                                            <div class="card-body">
+                                                <div class="alert alert-success success_alert_show" role="alert">
+                                                    <h4 class="alert-heading">Success, entry added</h4>
+                                                </div>
+                                                <div class="alert alert-danger error_alert_show" role="alert">
+                                                    <h4 class="alert-heading">Error, unable to entry</h4>
+                                                </div> 
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="select-role">Member Name</label>
+                                                            <select class="form-control" id="select-role" name="member_name" required>
+                                                                <option value="">Select name</option>>
+                                                                {% for mem in member_names %}
+                                                                    <option value="{{mem}}">{{mem}}</option>
+                                                                {% endfor %}    
+                                                                <option value="Father">Father</option>
+                                                                <option value="Others">Others</option>                                                       
+                                                            </select>
+                                                            <div class="valid-feedback">Looks good!</div>
+                                                            <div class="invalid-feedback">Please select Name</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="fp-default">Date</label>
+                                                            <input type="text" id="fp-default" name="date" class="form-control flatpickr-disabled-range date_val" placeholder="DD-MM-YYYY" required/>
+                                                            <div class="valid-feedback">Looks good!</div>
+                                                            <div class="invalid-feedback">Please Enter Date</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="basic-default-email1">Amount</label>
+                                                            <input list="amount_dropdown" type="number" name="amount" id="basic-default-email1" class="form-control" placeholder="Amount" aria-label="Mobile No" required />
+                                                            <datalist id="amount_dropdown">
+                                                            <option value="20">
+                                                            <option value="50">
+                                                            </datalist>
+                                                            <div class="valid-feedback">Looks good!</div>
+                                                            <div class="invalid-feedback">Please enter amount</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label for="select-role">Status</label>
+                                                            <select class="form-control week_inc_f_status" id="select-role" name="status" required>
+                                                                <option value="no">No</option>
+                                                                <option value="yes">Yes</option>
+                                                            </select>
+                                                            <div class="valid-feedback">Looks good!</div>
+                                                            <div class="invalid-feedback">Please select Status</div>
+                                                        </div>
+                                                    </div>                                         
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label class="d-block" for="validationBioBootstrap">Feedback</label>
+                                                            <textarea class="form-control week_inc_feedback" id="validationBioBootstrap" name="feedback" rows="3" required></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <button type="submit" class="btn btn-primary week_inc_submit">Submit</button>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <button type="reset" class="btn btn-primary">Reset</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Bootstrap Validation -->
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    {% include "base/footer.html" %}
+    <!-- END: Footer-->
+
+
+
+
+    <!-- BEGIN: Page JS-->
+    {% include "base/js.html" %}
+    <!-- END: Page JS-->
+
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>
